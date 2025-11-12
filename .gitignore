@@ -1,0 +1,71 @@
+# Created by https://www.toptal.com/developers/gitignore/api/swift,xcode
+
+### Swift ###
+# Xcode
+#
+# gitignore contributors: remember to keep this file compatible with Xcode 4.
+#
+# Swift Playgrounds
+#
+# Swift Package Manager
+#
+# Add this line if you are using Swift Playgrounds and don't want to track chapters, pages, etc.
+#
+# *.playground
+#
+# Add this line if you are using Swift Playgrounds and don't want to track progress
+#
+# timeline.xctimeline
+#
+# CocoaPods
+#
+# Carthage
+#
+# Accio
+#
+# fastlane
+#
+# Rome
+#
+# Tuist
+#
+# Mint
+#
+
+## User-specific
+.DS_Store
+*.xcodeproj/project.xcworkspace/xcshareddata/xcschemes/
+*.xcodeproj/xcuserdata/
+
+## Build generated
+DerivedData/
+build/
+Build/
+
+## Swift Package Manager
+.swiftpm/
+Packages/
+*.xcodeproj/project.pbxproj
+!Podfile.lock
+
+## Carthage
+Carthage/Build
+Carthage/Checkouts
+
+## Accio
+.accio/
+Dependencies/
+
+## Rome
+Rome/
+
+## Tuist
+*.xcworkspace
+*.playground
+Tuist/
+Derived/
+
+## Other
+*.xcdatamodeld/xcurrentversion
+
+# End of https://www.toptal.com/developers/gitignore/api/swift,xcode
