@@ -1,0 +1,30 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file (Evita problemas de LF vs CRLF)
+[*]
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+charset = utf-8
+
+# Swift / Objective-C files
+[*.{swift,h,m}]
+indent_style = space
+indent_size = 4
+
+# XML project files (like storyboard, xib, strings, plist)
+[*.{storyboard,xib,strings,plist}]
+indent_style = space
+indent_size = 4
+
+# Markdown / Text
+[*.{md,txt}]
+trim_trailing_whitespace = false
+
+# YAML / JSON / Configs (Github Actions, Dependabot, etc)
+[*.{yml,yaml,json}]
+indent_style = space
+indent_size = 2
