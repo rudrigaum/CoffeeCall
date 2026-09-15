@@ -2,7 +2,7 @@ name: Feature Request
 description: Suggest a new feature or improvement for Coffee Call
 title: "[Feature]: "
 labels:
-  - feature
+  - enhancement
 body:
   - type: markdown
     attributes:
