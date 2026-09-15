@@ -1,0 +1,142 @@
+name: Feature Request
+description: Suggest a new feature or improvement for Coffee Call
+title: "[Feature]: "
+labels:
+  - feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Coffee Call.
+
+        Please describe the problem, desired outcome, and relevant product context before proposing implementation details.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Opportunity
+      description: Describe the user problem, limitation, or opportunity this feature should address.
+      placeholder: |
+        Example:
+        Users currently cannot customize the size of a coffee before adding it to the cart.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-outcome
+    attributes:
+      label: Desired Outcome
+      description: Describe what the user should be able to accomplish after this feature is implemented.
+      placeholder: |
+        Example:
+        Users should be able to select an available coffee size before adding the product to the cart.
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-flow
+    attributes:
+      label: Expected User Flow
+      description: Describe the expected interaction from the user's perspective.
+      placeholder: |
+        1. Open a coffee detail screen
+        2. Select a size
+        3. Review the updated price
+        4. Add the coffee to the cart
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define observable conditions that indicate the feature is complete.
+      placeholder: |
+        - [ ] Available sizes are displayed
+        - [ ] The selected size is visually identifiable
+        - [ ] The price reflects the selected size
+        - [ ] The selected size is preserved when adding the item to the cart
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature Area
+      description: Select the area most closely related to this request.
+      options:
+        - Onboarding
+        - Authentication
+        - Coffee Catalog
+        - Coffee Details
+        - Cart
+        - Checkout
+        - Profile
+        - Navigation
+        - Design System
+        - Accessibility
+        - Architecture
+        - Developer Experience
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: Change Type
+      description: How would you classify this request?
+      options:
+        - New feature
+        - Enhancement to an existing feature
+        - User experience improvement
+        - Accessibility improvement
+        - Technical improvement
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative behavior or solution you considered.
+      placeholder: Describe alternatives if applicable.
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Technical Notes
+      description: |
+        Add implementation considerations only when they are relevant.
+
+        Product requirements should not depend on a specific technical solution unless there is a clear architectural constraint.
+      placeholder: |
+        Examples:
+        - Requires a new Use Case
+        - Requires API support
+        - Requires persistence
+        - May affect navigation flow
+
+  - type: textarea
+    id: design
+    attributes:
+      label: Design References
+      description: Add mockups, screenshots, references, or links when useful.
+      placeholder: Drag and drop images or add references here.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other information that may help evaluate the request.
+      placeholder: Related issues, dependencies, constraints, or additional context.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      options:
+        - label: I searched existing issues and did not find a duplicate request.
+          required: true
+        - label: This request describes a concrete user or product problem.
+          required: true
+        - label: The acceptance criteria describe observable behavior.
+          required: true
