@@ -1,0 +1,120 @@
+name: Bug Report
+description: Report unexpected behavior or a reproducible problem in Coffee Call
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a problem.
+
+        Before submitting, make sure the issue has not already been reported and remove any sensitive information from logs or screenshots.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: Clearly describe what happened and why you believe it is incorrect.
+      placeholder: Describe the unexpected behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: Describe what you expected to happen instead.
+      placeholder: Describe the expected behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Provide the smallest reliable sequence of steps that reproduces the issue.
+      placeholder: |
+        1. Open...
+        2. Tap...
+        3. Navigate to...
+        4. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: Describe the result you observe after following the reproduction steps.
+      placeholder: Describe what actually happens.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Reproduction Frequency
+      description: How consistently can the issue be reproduced?
+      options:
+        - Always
+        - Frequently
+        - Sometimes
+        - Rarely
+        - Unable to reproduce consistently
+    validations:
+      required: true
+
+  - type: input
+    id: ios-version
+    attributes:
+      label: iOS Version
+      description: Provide the iOS version where the issue occurs.
+      placeholder: "Example: iOS 17.6"
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device or Simulator
+      description: Provide the affected device or simulator model.
+      placeholder: "Example: iPhone 15 Pro Simulator"
+    validations:
+      required: true
+
+  - type: input
+    id: xcode-version
+    attributes:
+      label: Xcode Version
+      description: Provide the Xcode version used when reproducing the issue, when applicable.
+      placeholder: "Example: Xcode 15.4"
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots, Videos, or Logs
+      description: |
+        Add supporting evidence when useful.
+
+        Do not include passwords, tokens, API secrets, personal information, or other sensitive data.
+      placeholder: Drag and drop screenshots, recordings, or sanitized logs here.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other information that could help investigate the problem.
+      placeholder: Additional details, related issues, suspected causes, or recent changes.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+        - label: I can reproduce this issue on the latest available version of the project.
+          required: true
+        - label: I removed sensitive information from logs, screenshots, and attachments.
+          required: true
