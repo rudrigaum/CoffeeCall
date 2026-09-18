@@ -113,6 +113,7 @@
 			buildConfigurationList = 18748F872EAEAB4600E73418 /* Build configuration list for PBXNativeTarget "CoffeeCall" */;
 			buildPhases = (
 				18748F5A2EAEAB4300E73418 /* Sources */,
+				181BF865305C022F00F2B0E2 /* SwiftLint */,
 				18748F5B2EAEAB4300E73418 /* Frameworks */,
 				18748F5C2EAEAB4300E73418 /* Resources */,
 			);
@@ -244,6 +245,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		181BF865305C022F00F2B0E2 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nset -e\n\n# Include common Homebrew installation paths.\nexport PATH=\"/opt/homebrew/bin:/usr/local/bin:$PATH\"\n\n# Ensure SwiftLint is available.\nif ! command -v swiftlint >/dev/null 2>&1; then\n    echo \"error: SwiftLint is not installed or could not be found.\"\n    exit 1\nfi\n\n# Run SwiftLint from the repository root.\ncd \"$SRCROOT\"\n\nswiftlint lint --config \"$SRCROOT/.swiftlint.yml\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18748F5A2EAEAB4300E73418 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -290,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8MF89G73K4;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoffeeCall/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -322,6 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8MF89G73K4;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoffeeCall/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
