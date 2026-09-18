@@ -1,0 +1,31 @@
+# =========================
+# Auto detect text files and perform LF normalization
+# =========================
+* text=auto
+
+# =========================
+# Custom Language Statistics (GitHub)
+# =========================
+Pods/* linguist-vendored
+Carthage/* linguist-vendored
+Tuist/* linguist-vendored
+.build/* linguist-vendored
+DerivedData/* linguist-vendored
+Packages/* linguist-vendored
+
+# =========================
+# Binary Files
+# =========================
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.mp4 binary
+*.mov binary
+*.mp3 binary
+*.zip binary

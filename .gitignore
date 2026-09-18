@@ -1,71 +1,59 @@
-# Created by https://www.toptal.com/developers/gitignore/api/swift,xcode
-
-### Swift ###
-# Xcode
-#
-# gitignore contributors: remember to keep this file compatible with Xcode 4.
-#
-# Swift Playgrounds
-#
-# Swift Package Manager
-#
-# Add this line if you are using Swift Playgrounds and don't want to track chapters, pages, etc.
-#
-# *.playground
-#
-# Add this line if you are using Swift Playgrounds and don't want to track progress
-#
-# timeline.xctimeline
-#
-# CocoaPods
-#
-# Carthage
-#
-# Accio
-#
-# fastlane
-#
-# Rome
-#
-# Tuist
-#
-# Mint
-#
-
-## User-specific
+# =========================
+# macOS
+# =========================
 .DS_Store
-*.xcodeproj/project.xcworkspace/xcshareddata/xcschemes/
-*.xcodeproj/xcuserdata/
+**/.DS_Store
+*~
+*.swp
 
-## Build generated
-DerivedData/
+# =========================
+# Xcode
+# =========================
 build/
 Build/
+DerivedData/
+*.modulemap
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
 
-## Swift Package Manager
-.swiftpm/
+xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# =========================
+# Swift Package Manager
+# =========================
+.swiftpm/xcode/
+.build/
 Packages/
-*.xcodeproj/project.pbxproj
+
+# =========================
+# CocoaPods
+# =========================
+Pods/
+# O Podfile.lock deve ser comitado sempre
 !Podfile.lock
 
-## Carthage
-Carthage/Build
-Carthage/Checkouts
+# =========================
+# Fastlane 
+# =========================
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
 
-## Accio
-.accio/
-Dependencies/
+# =========================
+# Outros Módulos / Ferramentas
+# =========================
+# Tuist
+Tuist/Derived/
+.tuist-bin/
 
-## Rome
-Rome/
+# Carthage
+Carthage/Build/
 
-## Tuist
-*.xcworkspace
-*.playground
-Tuist/
-Derived/
-
-## Other
-*.xcdatamodeld/xcurrentversion
-
-# End of https://www.toptal.com/developers/gitignore/api/swift,xcode
+# Arquivos de crash e logs
+*.crash
+*.log

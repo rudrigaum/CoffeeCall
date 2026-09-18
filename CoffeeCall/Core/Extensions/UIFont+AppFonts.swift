@@ -13,7 +13,7 @@ extension UIFont {
     enum AppFontName: String {
         case poppinsRegular = "Poppins-Regular"
     }
-    
+
     static func appFont(name: AppFontName, size: CGFloat) -> UIFont {
         if let font = UIFont(name: name.rawValue, size: size) {
             return font

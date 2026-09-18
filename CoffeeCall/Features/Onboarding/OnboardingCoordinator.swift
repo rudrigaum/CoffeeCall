@@ -9,17 +9,17 @@ import Foundation
 import UIKit
 
 final class OnboardingCoordinator: Coordinator {
-    
+
     // MARK: - Properties
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     weak var parentCoordinator: Coordinator?
-    
+
     // MARK: - Init
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
+
     // MARK: - Lifecycle
     func start() {
         let viewModel = WelcomeViewModel()
@@ -27,7 +27,7 @@ final class OnboardingCoordinator: Coordinator {
         let viewController = WelcomeViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
     }
-    
+
     // MARK: - Navigation Actions
     private func showLogin() {
         print("DEBUG: Navegar para Login ou Próxima tela do Onboarding")

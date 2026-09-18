@@ -51,19 +51,19 @@ final class WelcomeView: UIView {
     }()
 
     private lazy var pageControl: UIPageControl = {
-        let pc = UIPageControl()
-        pc.currentPage = 0
-        pc.numberOfPages = 3
-        pc.currentPageIndicatorTintColor = UIColor(red: 44/255, green: 62/255, blue: 80/255, alpha: 1.0)
-        pc.pageIndicatorTintColor = .systemGray5
-        pc.isUserInteractionEnabled = true
-        pc.addTarget(self, action: #selector(pageControlValueChanged(_:)), for: .valueChanged)
+        let pageControl = UIPageControl()
+        pageControl.currentPage = 0
+        pageControl.numberOfPages = 3
+        pageControl.currentPageIndicatorTintColor = UIColor(red: 44/255, green: 62/255, blue: 80/255, alpha: 1.0)
+        pageControl.pageIndicatorTintColor = .systemGray5
+        pageControl.isUserInteractionEnabled = true
+        pageControl.addTarget(self, action: #selector(pageControlValueChanged(_:)), for: .valueChanged)
 
         if #available(iOS 14.0, *) {
-            pc.backgroundStyle = .minimal
+            pageControl.backgroundStyle = .minimal
         }
-        pc.translatesAutoresizingMaskIntoConstraints = false
-        return pc
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        return pageControl
     }()
 
     private lazy var nextButton: UIButton = {
@@ -106,7 +106,13 @@ final class WelcomeView: UIView {
         }
 
         if animated {
-            UIView.transition(with: self, duration: 0.3, options: .transitionCrossDissolve, animations: updates, completion: nil)
+            UIView.transition(
+                with: self,
+                duration: 0.3,
+                options: .transitionCrossDissolve,
+                animations: updates,
+                completion: nil
+            )
         } else {
             updates()
         }
@@ -144,14 +150,19 @@ final class WelcomeView: UIView {
     // MARK: - Actions
 
     @objc private func didTapButton() {
-        UIView.animate(withDuration: 0.1, animations: {
-            self.nextButton.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
-        }) { _ in
-            UIView.animate(withDuration: 0.1) {
-                self.nextButton.transform = .identity
+        UIView.animate(
+            withDuration: 0.1,
+            animations: {
+                self.nextButton.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+            },
+            completion: { _ in
+                UIView.animate(withDuration: 0.1) {
+                    self.nextButton.transform = .identity
+                }
+
+                self.onNextButtonTapped?()
             }
-            self.onNextButtonTapped?()
-        }
+        )
     }
 
     @objc private func pageControlValueChanged(_ sender: UIPageControl) {

@@ -17,11 +17,11 @@ protocol Coordinator: AnyObject {
 
 extension Coordinator {
     func childDidFinish(_ child: Coordinator?) {
-        for (index, coordinator) in childCoordinators.enumerated() {
-            if coordinator === child {
-                childCoordinators.remove(at: index)
-                break
-            }
+        guard let child,
+              let index = childCoordinators.firstIndex(where: { $0 === child }) else {
+            return
         }
+
+        childCoordinators.remove(at: index)
     }
 }

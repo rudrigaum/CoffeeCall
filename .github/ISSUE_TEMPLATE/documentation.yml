@@ -1,0 +1,107 @@
+name: Documentation
+description: Report missing, outdated, unclear, or incorrect documentation
+title: "[Docs]: "
+labels:
+  - documentation
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Coffee Call's documentation.
+
+        Use this form to report documentation that is missing, outdated, unclear, incomplete, or incorrect.
+
+  - type: dropdown
+    id: documentation-area
+    attributes:
+      label: Documentation Area
+      description: Select the area most closely related to this issue.
+      options:
+        - README
+        - Architecture
+        - Contributing Guide
+        - Security Policy
+        - Development Setup
+        - Code Documentation
+        - GitHub Configuration
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What kind of documentation issue is this?
+      options:
+        - Missing documentation
+        - Incorrect information
+        - Outdated information
+        - Unclear explanation
+        - Incomplete instructions
+        - Broken example or reference
+        - Improvement suggestion
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Clearly describe the documentation problem or improvement.
+      placeholder: |
+        Explain what is missing, incorrect, outdated, or difficult to understand.
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Documentation Location
+      description: Identify the file, section, heading, or code reference affected.
+      placeholder: |
+        Example:
+        README.md → Getting Started
+
+        or
+
+        ARCHITECTURE.md → Dependency Injection
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-content
+    attributes:
+      label: Expected Content
+      description: Describe what the documentation should communicate instead.
+      placeholder: |
+        Describe the expected clarification, correction, or missing information.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-change
+    attributes:
+      label: Proposed Change
+      description: Suggest wording, structure, examples, or references if you already have an idea.
+      placeholder: Optional proposed solution.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any additional information that may help understand the issue.
+      placeholder: Related issues, screenshots, examples, or additional context.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+        - label: I identified the affected documentation as precisely as possible.
+          required: true
+        - label: I verified that this issue applies to the current project documentation.
+          required: true
